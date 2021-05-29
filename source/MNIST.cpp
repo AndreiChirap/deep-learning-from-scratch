@@ -1,6 +1,7 @@
 #include <iostream>
-#include <filesystem>
 #include <string>
+#include <filesystem>
+#include <fstream>
 
 #include "../header/MNIST.h"
 

@@ -4,7 +4,7 @@
 #include <fstream>
 
 #include "../header/utils.h"
-#include "../header/mnist.h"
+#include "../header/datasets.h"
 
 deep_learning::datasets::Mnist::Mnist(const std::string& dataset_path){
     std::ifstream in(dataset_path);

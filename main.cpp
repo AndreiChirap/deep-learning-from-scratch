@@ -1,4 +1,4 @@
-#include "./header/mnist.h"
+#include "./header/datasets.h"
 #include "./header/utils.h"
 
 using namespace deep_learning;

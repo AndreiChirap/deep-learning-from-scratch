@@ -11,8 +11,8 @@ namespace deep_learning{
             public:
                 Mnist(const std::string& dataset_path);
                 ~Mnist();
-                float get_target_by_index(int index);
-                std::vector<float>* get_digit_by_index(int index);
+                const float get_target_by_index(int index);
+                const std::vector<float>* get_digit_by_index(int index);
                 void print_digit_to_console_by_index(int index);
         };
     };

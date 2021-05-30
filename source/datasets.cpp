@@ -36,10 +36,10 @@ deep_learning::datasets::Mnist::~Mnist(){
     delete this->targets;
 }
 
-float deep_learning::datasets::Mnist::get_target_by_index(int index){
+const float deep_learning::datasets::Mnist::get_target_by_index(int index){
     return this->targets->at(index);
 }
-std::vector<float>* deep_learning::datasets::Mnist::get_digit_by_index(int index){
+const std::vector<float>* deep_learning::datasets::Mnist::get_digit_by_index(int index){
     return this->digits->at(index);
 }
 void deep_learning::datasets::Mnist::print_digit_to_console_by_index(int index){

@@ -6,7 +6,7 @@
 #include "../header/utils.h"
 #include "../header/mnist.h"
 
-deep_learning::Mnist::Mnist(const std::string& dataset_path){
+deep_learning::datasets::Mnist::Mnist(const std::string& dataset_path){
     std::ifstream in(dataset_path);
     std::string contents((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
     std::vector<std::string> digits_tokens = deep_learning::utils::split(contents, "\n");
@@ -27,7 +27,7 @@ deep_learning::Mnist::Mnist(const std::string& dataset_path){
     }        
 }
 
-deep_learning::Mnist::~Mnist(){
+deep_learning::datasets::Mnist::~Mnist(){
     for(auto& digit: *this->digits){
         digit->clear();
     }
@@ -36,13 +36,13 @@ deep_learning::Mnist::~Mnist(){
     delete this->targets;
 }
 
-float deep_learning::Mnist::get_target_by_index(int index){
+float deep_learning::datasets::Mnist::get_target_by_index(int index){
     return this->targets->at(index);
 }
-std::vector<float>* deep_learning::Mnist::get_digit_by_index(int index){
+std::vector<float>* deep_learning::datasets::Mnist::get_digit_by_index(int index){
     return this->digits->at(index);
 }
-void deep_learning::Mnist::print_digit_to_console_by_index(int index){
+void deep_learning::datasets::Mnist::print_digit_to_console_by_index(int index){
     std::vector<float> digit = *this->get_digit_by_index(index);
     int counter = 0;
     for(auto pixel: digit){

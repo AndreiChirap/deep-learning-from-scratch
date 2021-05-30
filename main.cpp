@@ -7,6 +7,7 @@ int main(){
     //load dataset to memory
     utils::print("Loading training set...");
     datasets::Mnist* train_dataset = new datasets::Mnist("./dataset/train.txt");
+    
     utils::print("Loading test set...");
     datasets::Mnist* test_dataset = new datasets::Mnist("./dataset/test.txt");
 

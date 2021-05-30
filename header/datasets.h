@@ -3,7 +3,9 @@
 #include <vector>
 
 namespace deep_learning{
+    
     namespace datasets{
+
         class Mnist{
             private:
                 std::vector<std::vector<float>*>* digits = new std::vector<std::vector<float>*>();
@@ -15,5 +17,7 @@ namespace deep_learning{
                 const std::vector<float>* get_digit_by_index(int index);
                 void print_digit_to_console_by_index(int index);
         };
+
     };
+    
 };

@@ -49,7 +49,7 @@ void deep_learning::datasets::Mnist::print_digit_to_console_by_index(int index){
         counter++;
         if(pixel < 10){
             std::cout << pixel<<"  ";
-        }else if( (pixel > 10) && (pixel < 100) ){
+        }else if( (pixel >= 10) && (pixel < 100) ){
             std::cout << pixel<<" ";
         }else{
             std::cout << pixel;
